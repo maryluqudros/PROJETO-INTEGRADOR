@@ -1,0 +1,241 @@
+/* ======== NAVBAR ======== */
+       .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 10px 20px;
+         background: white;
+         flex-wrap: wrap;
+         gap: 15px;
+       }
+
+       .logo img {
+         height: 80px;
+         max-width: 100%;
+       }
+
+       .menu {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 15px;
+       }
+
+       .menu a {
+         color: #000;
+         text-decoration: none;
+         font-weight: bold;
+         white-space: nowrap;
+       }
+
+       /* ======== BARRA DE PESQUISA ======== */
+       .search-box {
+         display: flex;
+         align-items: center;
+         background: #fff;
+         border-radius: 25px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         padding: 8px 15px;
+         width: 280px;
+         border: 1px solid #000;
+         margin: 10px 0;
+       }
+
+       .search-box input {
+         border: none;
+         outline: none;
+         background: transparent;
+         flex: 1;
+         font-size: 14px;
+         color: #000;
+       }
+
+       .search-box input::placeholder {
+         color: #888;
+       }
+
+       .search-box .icon {
+         width: 20px;
+         height: 20px;
+         margin-right: 8px;
+       }
+
+       hr {
+         border: none;
+         border-top: 1px solid #ccc;
+         margin: 0;
+       }
+
+
+
+:root {
+            --primary-color: #333;
+            --secondary-color: #666;
+            --accent-color: #08153a;
+            --light-color: #f5f5f5;
+            --border-color: #ddd;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+        
+        .produto {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .produto-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .produto-imagem {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            height: 400px;
+        }
+        
+        .produto-imagem img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .detalhes {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .artista {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .descricao {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .preco{
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .parcelamento {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        
+        .quantidade {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .quantidade-btn {
+            width: 30px;
+            height: 30px;
+            background-color: var(--light-color);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .quantidade-input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            margin: 0 5px;
+        }
+        
+        .buy-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .buy-btn:hover {
+            background-color: #1b3274;
+        }
+        
+        .frete {
+            margin-top: 20px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+        
+        .frete-titulo {
+            margin-bottom: 10px;
+        }
+        
+        .frete-input {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .frete-input input {
+            flex: 1;
+            padding: 8px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+        
+        .frete-input button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .aviso{
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+            }
+        }
+

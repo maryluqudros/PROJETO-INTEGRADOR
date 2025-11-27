@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illuminate Vinil</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+    <section style="background-color: white;">
+        <div class="navbar">
+            <div class="logo">
+                <a href=""><img src="FOTOS/Logo.png" alt="LOGO ILLUMINATE"></a>
+            </div>
+
+            <div class="search-box">
+                <span class="icon"><img src="" alt=""></span>
+                <input type="text" placeholder="Buscar...">
+            </div>
+
+            <div class="menu">
+                <a href="#">MAIS PROCURADOS</a>
+                <a href="#">LPS E VINIS</a>
+                <a href="#">ARTISTAS</a>
+                <a href="#">CONTATO</a>
+            </div>
+        </div>
+        <hr>
+        <div class="produto">
+            <div class="produto-container">
+                <div class="produto-imagem">
+                    <!-- Espaço para a imagem do produto -->
+                    <img src="VINIS/HIGHWAY TO HELL.jfif" alt="HIGHWAY TO HELL">
+                </div>
+
+                <div class="detalhes">
+                    <h1 class="titulo">HIGHWAY TO HELL</h1>
+                    <p class="artista">AC/DC</p>
+
+                    <div class="preco">R$ 420,99</div>
+                    <div class="parcelamento">ou 12x de R$ 14,15</div>
+
+                    <div class="quantidade">
+                        <div class="menos">-</div>
+                        <input type="text" class="quantidade-input" value="1">
+                        <div class="mais">+</div>
+                    </div>
+
+                    <button class="buy-btn">Adicionar ao carrinho</button>
+
+                    <p class="aviso">Adicionar o produto no carrinho não garante a sua reserva. Finalize a compra e
+                        garanta o seu produto!</p>
+
+                    <div class="frete">
+                        <h3 class="frete-titulo">Calcule o prazo de entrega</h3>
+                        <div class="frete-input">
+                            <input type="text" placeholder="CEP">
+                            <button>Calcular</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Funcionalidade para aumentar/diminuir quantidade
+            document.querySelector('.quantity-btn.plus').addEventListener('click', function () {
+                const input = document.querySelector('.quantity-input');
+                input.value = parseInt(input.value) + 1;
+            });
+
+            document.querySelector('.quantity-btn.minus').addEventListener('click', function () {
+                const input = document.querySelector('.quantity-input');
+                if (parseInt(input.value) > 1) {
+                    input.value = parseInt(input.value) - 1;
+                }
+            });
+
+            // Validação básica do CEP
+            document.querySelector('.shipping-input button').addEventListener('click', function () {
+                const cepInput = document.querySelector('.shipping-input input');
+                const cep = cepInput.value.replace(/\D/g, '');
+
+                if (cep.length === 8) {
+                    alert('Frete calculado para o CEP: ' + cep);
+                } else {
+                    alert('Por favor, insira um CEP válido (8 dígitos)');
+                }
+            });
+        </script>
+</body>
+
+</html>
